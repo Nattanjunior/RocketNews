@@ -1,0 +1,100 @@
+$font-Spartan: 'League Spartan', sans-serif;
+$font-work:'Work Sans', sans-serif;;
+
+:root {
+    --body-bg-color: #121214;
+    --text-color: #E1E1E6;
+    --title-color: #04D361;
+    --form-color: #A8A8A8;
+    --bg-button-color: #8257e5;
+  }
+
+
+.img-read{
+    img{
+    width: 1010px;
+    height: 100%;
+    position: absolute;
+    left: 356px;
+    z-index:-1;
+    }
+   
+}
+.container-1{
+    width:720px;
+    height:633px;
+    background-color: #000000;
+    .logo{
+        width:389px;
+        height: 94px;
+        margin-top: 50px;
+    }
+    h2{
+        font-family: $font-work;
+        margin-top:50px;
+        font-size: 24px;
+        color: var(--title-color);
+    }
+    h3{
+        font-family: $font-Spartan;
+        font-size: 14px;
+        color: var(--text-color);
+    }
+    .description{
+        font-family: $font-Spartan;
+        font-size: 14px;
+        color: var(--form-color);
+    }
+    .logo,h2,h3,.description,.input-login,.link-para-ler{
+        position: relative;
+        left: 20px;
+    }
+    .input-login{
+        label{
+            font-family: $font-Spartan;
+            display: block;
+            margin-top: 50px;
+            color: var(--form-color);
+        }
+        input{
+            margin-top: 10px;
+            width:798px;
+            height: 48px;
+            padding-left: 20px;
+            outline: none;
+            border: 0px;
+            border-left: 5px solid #04D361;
+            box-shadow: 4px 4px 4px 2px #0000002e;
+        }
+        input::placeholder{
+            font-family: $font-Spartan;
+        }
+        button{
+            position: relative;
+            top: -48px;
+            left: 750px;
+            width:48px;
+            height: 48px;
+            outline: none;
+            border: 0px;
+            background-color: var(--bg-button-color);
+            img{
+                filter: brightness(0) invert(1); // Torna a imagem branca.. 
+            }
+            
+            
+        }
+    }
+    .link-para-ler{
+    a{
+        font-family: $font-Spartan;
+        text-decoration: none;
+        color: var(--bg-button-color);
+        img{
+            background-color:var(--bg-button-color);
+            border-radius: 50%;
+        }
+    }
+    
+}
+}
