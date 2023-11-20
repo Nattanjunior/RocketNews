@@ -12,7 +12,7 @@ export function Index(){
   const handleButton = async (e)=>{
     e.preventDefault()
     try{
-        const response = await axios.post('http://localhost:3000',
+        const response = await axios.post('https://rocket-news-pi.vercel.app/',
         {email},
         {
             headers: {'Content-Type': 'application/json'}
