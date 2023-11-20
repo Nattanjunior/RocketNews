@@ -3,6 +3,7 @@ const app = express()
 const cors = require('cors')
 const nodemailer = require('nodemailer')
 const mongoose = require('mongoose')
+const port = process.env.PORT || 3000
 app.use(cors())
 app.use(express.json())
 
@@ -46,20 +47,17 @@ app.post('/', async (req,res)=>{
     //Enviando E-mail
     transport.sendMail(mailOptions, (err,data) => {
         if(err){
-            console.error(err);
             res.status(500).json({message: 'Erro ao enviar o E-mail'})
         }else{
-            console.log('E-mail enviado:' + data.response);
             res.json({message: `E-mail salvo e enviado com sucesso para: ${saveEmail.email}`, data:saveEmail })
         }
     })
     }catch(err){
-        console.error(err);
         res.status(500).json({message: 'Erro ao enviar o E-mail'})
     }
 });
 
-app.listen(3000,()=>{
-    console.log(`servidor escutando na porta 3000`)
+app.listen(port,()=>{
+    console.log(`servidor escutando na porta ${port}`)
 })
 
