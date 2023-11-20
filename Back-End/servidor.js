@@ -13,6 +13,10 @@ const CreateEmail = new mongoose.Schema({
 }) ;
 let Email = mongoose.model("email", CreateEmail)
 
+app.get('/',(req,res)=>{
+    res.send('hello world')
+})
+
 
 
 app.post('/', async (req,res)=>{
