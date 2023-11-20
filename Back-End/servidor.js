@@ -4,10 +4,11 @@ const cors = require('cors')
 const nodemailer = require('nodemailer')
 const mongoose = require('mongoose')
 const port = process.env.PORT || 3000
+require('dotenv').config()
 app.use(cors())
 app.use(express.json())
 
-mongoose.connect('mongodb+srv://NattanJunior:Futuromilionario1@cluster0.yyp9mj8.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect(process.env.MONGODB_URI)
 const CreateEmail = new mongoose.Schema({
     email: String,
 }) ;
@@ -34,8 +35,8 @@ app.post('/', async (req,res)=>{
     const transport = nodemailer.createTransport({
     service:'gmail',
     auth:{
-        user:'',
-        pass: ''
+        user: process.env.GMAIL_USER,
+        pass: process.env.PASS_USER
         
     },
 })
