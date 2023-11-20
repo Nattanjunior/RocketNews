@@ -43,7 +43,7 @@ app.post('/', async (req,res)=>{
 
     //Configuração do E-mail
     const mailOptions = {
-        from: 'fnatanieljunior@gmail.com', 
+        from: process.env.GMAIL_USER, 
         to: saveEmail.email,
         subject: 'Teste',
         text: 'Teste de Envio de E-mail.',
