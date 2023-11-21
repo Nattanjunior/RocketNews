@@ -4,8 +4,11 @@ const cors = require('cors')
 const nodemailer = require('nodemailer')
 const mongoose = require('mongoose')
 const port = process.env.PORT || 3000
+const corsOptions = {
+    origin: 'https://rocket-news-l5f2.vercel.app'
+}
 require('dotenv').config()
-app.use(cors())
+app.use(cors(corsOptions))
 app.use(express.json())
 
 mongoose.connect(process.env.MONGODB_URI)
