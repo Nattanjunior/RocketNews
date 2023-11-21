@@ -3,7 +3,7 @@ const app = express()
 const cors = require('cors')
 const nodemailer = require('nodemailer')
 const mongoose = require('mongoose')
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3001
 require('dotenv').config()
 app.use(cors())
 app.use(express.json())
