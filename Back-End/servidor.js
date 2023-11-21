@@ -5,7 +5,7 @@ const nodemailer = require('nodemailer')
 const mongoose = require('mongoose')
 const port = process.env.PORT || 3000
 const corsOptions = {
-    origin: 'http://127.0.0.1:5173/'
+    origin: 'http://127.0.0.1:5173'
 }
 require('dotenv').config()
 app.use(cors(corsOptions))
